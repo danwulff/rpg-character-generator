@@ -6,9 +6,52 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.3.min.js"></script>
     <script src="js/scripts.js"></script>
-    <title></title>
+    <title>RPGenerator</title>
   </head>
   <body>
+    <div class="container">
+      <div id="sidebar">
+        <ul id="savedCharacters">
+
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <form id="submitCharacter">
+            <label for="characterName">Enter A Name or Leave Blank to Generate a Random Name</label>
+            <input id="characterName" type="text" class="form-control"></input>
+
+            <label for="characterAge">Select an Age or Leave Blank to Generate a Random Age<label>
+            <select id='age' name="age" class="form-control">
+              <option value="">Random</option>
+              <option value="Young">Young</option>
+              <option value="Middle-aged">Middle-aged</option>
+              <option value="Old">Old</option>
+            </select>
+
+            <label for="realm">Choose a Realm. Leave empty to generate at random</label>
+            <select id="realm"  name="realms" class="form-control">
+              <option value="Middle Earth">Middle Earth</option>
+              <option value="Modern Earth">Modern Earth</option>
+              <option value="Warhammer 40k">Warhammer 40k</option>
+            </select>
+
+            <label for="race">Enter A Character Race or Leave Blank to Generate at Random</label>
+            <input id="race" type="text" class="form-control"></input>
+
+            <label for="profession">Enter a profession or leave empty to generate at random</label>
+            <input id="profession" type="text" class="form-control"></input>
+
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <p id="characterOutput"></p>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
