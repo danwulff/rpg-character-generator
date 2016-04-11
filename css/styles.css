@@ -24,17 +24,29 @@
   padding-bottom: 10px;
 }
 
-.jumbotron a{
+.splash .jumbotron a{
   color: white;
   width: 125px;
   font-size: 20px;
 }
 
-.gradient{
+.splash .gradient{
   padding: 7px;
   background: #765A7D; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* Standard syntax */
+}
+
+.about .about-content {
+  text-align: left;
+}
+
+.about .about-content img {
+  float: left;
+}
+
+.about .about-content h3 {
+  color: #3a53a4;
 }
