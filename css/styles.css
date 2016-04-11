@@ -1,0 +1,40 @@
+.splash .jumbotron {
+  background-color: #2B2B2B;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-shadow: 2px 2px 4px #765A7D, 2px -2px 4px #765A7D, -2px 2px 4px #765A7D, -2px -2px 4px #765A7D;
+}
+
+.splash .jumbotron h1{
+  margin-top: 0px;
+  font-size: 100px;
+}
+
+.splash .jumbotron h3{
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.splash .jumbotron h4{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.jumbotron a{
+  color: white;
+  width: 125px;
+  font-size: 20px;
+}
+
+.gradient{
+  padding: 7px;
+  background: #765A7D; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* Standard syntax */
+}
