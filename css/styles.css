@@ -5,7 +5,7 @@
   margin-bottom: 0px;
   padding-bottom: 20px;
   padding-top: 20px;
-  text-shadow: 2px 2px 4px #765A7D, 2px -2px 4px #765A7D, -2px 2px 4px #765A7D, -2px -2px 4px #765A7D;
+  text-shadow: 4px 4px 3px #765A7D, 4px -4px 3px #765A7D, -4px 4px 3px #765A7D, -4px -4px 3px #765A7D;
 }
 
 .splash .jumbotron h1{
@@ -37,6 +37,36 @@
   background: -o-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* Standard syntax */
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(145,100,140, 1);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 12px rgba(204,169,44, .2);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, .2);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(145,100,140, 1);
+    box-shadow: 0 0 0 0 rgba(145,100,140, 1);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 12px rgba(204,169,44, .2);
+      box-shadow: 0 0 0 12px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, .2);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+.about {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .about .about-content {
