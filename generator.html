@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="generator">
   <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="img/sword-icon.png"/>
@@ -11,12 +11,12 @@
     <title>RPGenerator</title>
   </head>
   <body>
-    <div class="container">
       <!-- Row -->
       <div class="row">
 
         <!-- Character Lists -->
         <div class="col-xs-3">
+          <div class="container">
           <h3>Saved Characters</h3>
           <ul id="savedList">
           </ul>
@@ -24,6 +24,7 @@
           <ul id="historyList">
           </ul>
           <button type="button" class="btn" id="clearHistory">Clear</button>
+          </div>
         </div>
         <!-- End: Character Lists -->
 
@@ -32,6 +33,7 @@
 
           <!-- Character Creation -->
           <div class="row">
+            <div class="container">
             <h3>Character Creation</h3>
             <form id="submitCharacter">
               <label for="characterName">Enter A Name or Leave Blank to Generate a Random Name</label>
@@ -69,15 +71,18 @@
               <button type="submit" class="btn">Submit</button>
             </form>
           </div>
+          </div>
           <!-- End: Character Creation -->
 
           <!-- Character Output -->
           <div class="row">
+            <div class="container">
             <h3>Character Output</h3>
             <p id="characterOutput">
               You are <strong><span id="outputName">Corbus Lorax</span></strong> a <strong><span id="outputAge">Old</span></strong>, <strong><span id="outputRace">Human</span></strong>, <strong><span id="outputGender">Male</span></strong>, <strong><span id="outputProfession">Pirate</span></strong> from the <strong><span id="outputRealm">Star Trek</span></strong> Realm. You are known for your great achievement <strong><span id="outputDescription">has slain 500 orcs</span></strong> and are on a quest to <strong><span id="outputQuest">To seek the Holy Grail</span></strong>.
             </p>
             <button id="saveChar" type="text" class="btn">Save Character</button>
+          </div>
           </div>
           <!-- End: Character Output -->
 
@@ -85,6 +90,5 @@
         <!-- End: Char creation & output -->
       </div>
       <!-- End: Row -->
-    </div>
   </body>
 </html>

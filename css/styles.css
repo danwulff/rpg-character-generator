@@ -1,3 +1,6 @@
+
+/*--------------------- SPLASH PAGE -- SPLASH PAGE---------------------*/
+
 .splash .jumbotron {
   background-color: #2B2B2B;
   color: white;
@@ -5,7 +8,7 @@
   margin-bottom: 0px;
   padding-bottom: 20px;
   padding-top: 20px;
-  text-shadow: 4px 4px 3px #765A7D, 4px -4px 3px #765A7D, -4px 4px 3px #765A7D, -4px -4px 3px #765A7D;
+  text-shadow: 4px 4px 5px #765A7D, 4px -4px 5px #765A7D, -4px 4px 5px #765A7D, -4px -4px 5px #765A7D;
 }
 
 .splash .jumbotron h1{
@@ -64,6 +67,40 @@
       box-shadow: 0 0 0 0 rgba(204,169,44, 0);
   }
 }
+
+
+/*--------------------- GENERATOR PAGE -- GENERATOR PAGE ---------------------*/
+
+.generator html,body {
+  height:100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.generator .col-xs-3 {
+  background: url('../img/paper-side.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100vh;
+  background-color: #E7C987;
+}
+
+.generator .col-xs-9 {
+  background: url('../img/paper-bg.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100vh;
+}
+
+form {
+  width: 80%;
+}
+
+/*--------------------- ABOUT PAGE -- ABOUT PAGE ---------------------*/
 
 .about {
   font-family: 'Open Sans', sans-serif;
