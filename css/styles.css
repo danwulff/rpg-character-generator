@@ -80,3 +80,7 @@
 .about .about-content h3 {
   color: #3a53a4;
 }
+/* this rounds all img corners */
+.about img {
+    border-radius: .5em;
+}
