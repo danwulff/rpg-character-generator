@@ -57,8 +57,15 @@ function randomize(charObj) {
   if (charObj.realm === 'Middle Earth') {
     if (charObj.name === '' && charObj.gender === 'Male') {
       charObj.name = charObj.random(namesMaleMiddleEarth);
-    } else if (charObj.name === ''){
+    } else if (charObj.name === '' && charObj.gender === 'Female'){
       charObj.name = charObj.random(namesFemaleMiddleEarth);
+    } else {
+        var randomValue = Math.random();
+        if (randomValue < 0.5) {
+          charObj.name = charObj.random(namesMaleMiddleEarth);
+        } else {
+          charObj.name = charObj.random(namesFemaleMiddleEarth);
+        }
     }
 
     if (charObj.race === '') {
@@ -72,9 +79,17 @@ function randomize(charObj) {
   } else if (charObj.realm === 'Modern Earth'){
     if (charObj.name === '' && charObj.gender === 'Male') {
       charObj.name = charObj.random(namesMaleModernEarth);
-    } else if (charObj.name === ''){
+    } else if (charObj.name === '' && charObj.gender === 'Female'){
       charObj.name = charObj.random(namesFemaleModernEarth);
+    } else {
+        var randomValue = Math.random();
+        if (randomValue < 0.5) {
+          charObj.name = charObj.random(namesFemaleModernEarth);
+        } else {
+          charObj.name = charObj.random(namesMaleModernEarth);
+        }
     }
+
 
     if (charObj.race === '') {
       charObj.race = charObj.random(racesModernEarth);
@@ -87,8 +102,15 @@ function randomize(charObj) {
   } else {
     if (charObj.name === '' && charObj.gender === 'Male') {
       charObj.name = charObj.random(namesMaleStarTrek);
-    } else if (charObj.name === ''){
+    } else if (charObj.name === '' && charObj.gender === 'Female'){
       charObj.name = charObj.random(namesFemaleStarTrek);
+    } else {
+        var randomValue = Math.random();
+        if (randomValue < 0.5) {
+          charObj.name = charObj.random(namesFemaleStarTrek);
+        } else {
+          charObj.name = charObj.random(namesMaleStarTrek);
+        }
     }
 
     if (charObj.race === '') {
@@ -172,8 +194,17 @@ $(document).ready(function() {
   //submit for new character
   $("#submitCharacter").submit(function(event){
     event.preventDefault();
+
+    var genderChoice;
+
+    if ($('#altGender').val() === '') {
+      genderChoice = $('#gender').val();
+    } else {
+      genderChoice = $('#altGender').val();
+    }
+
     //create character
-    var newCharacter = new Character($('#characterName').val(), $('#gender').val(), $('#age').val(), $('#realm').val(), $('#race').val(), $('#profession').val());
+    var newCharacter = new Character($('#characterName').val(), genderChoice, $('#age').val(), $('#realm').val(), $('#race').val(), $('#profession').val());
     //randomize character (where fields were left blank)
     randomize(newCharacter);
     //print latest character
@@ -241,5 +272,5 @@ var racesStarTrek = ['Klingon', 'Human', 'Borg', 'Synthetic Life Form', 'Ferengi
 var professionsMiddleEarth = ['Baker', 'Mercenary', 'Ruler', 'Toymaker', 'Ranger', 'Ferryman', 'Innkeeper', 'Stablehand', 'Lord', 'Gatekeeper', 'Blacksmith', 'Bard'];
 var professionsModernEarth = ['CIA Operative', 'Cabbie', 'Mercenary', 'Baker', 'Programmer', 'Toymaker', 'Farmer', 'Jockey', 'Pilot', 'Golfer', 'Ambassador', 'General'];
 var professionsStarTrek = ['Federation Officer', 'Redshirt', 'Engineer', 'Barkeep', 'Trader', 'Pilot', 'Pirate', 'Miner', 'Doctor', 'Mercenary', 'Baker'];
-var descriptions = ['has slain 500 orcs', 'has baked over 100 cakes', 'has defeated over 100 mercenary bakers'];
+var descriptions = ['have slain 500 orcs', 'have baked over 100 cakes', 'have defeated over 100 mercenary bakers'];
 var quests = ['to seek the holy grail', 'to annoy the felonius Monk', 'to bake 101 cakes'];
