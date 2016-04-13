@@ -241,5 +241,5 @@ var racesStarTrek = ['Klingon', 'Human', 'Borg', 'Synthetic Life Form', 'Ferengi
 var professionsMiddleEarth = ['Baker', 'Mercenary', 'Ruler', 'Toymaker', 'Ranger', 'Ferryman', 'Innkeeper', 'Stablehand', 'Lord', 'Gatekeeper', 'Blacksmith', 'Bard'];
 var professionsModernEarth = ['CIA Operative', 'Cabbie', 'Mercenary', 'Baker', 'Programmer', 'Toymaker', 'Farmer', 'Jockey', 'Pilot', 'Golfer', 'Ambassador', 'General'];
 var professionsStarTrek = ['Federation Officer', 'Redshirt', 'Engineer', 'Barkeep', 'Trader', 'Pilot', 'Pirate', 'Miner', 'Doctor', 'Mercenary', 'Baker'];
-var descriptions = ['has slain 500 orcs', 'has baked over 100 cakes', 'has defeated over 100 mercenary bakers'];
+var descriptions = ['have slain 500 orcs', 'have baked over 100 cakes', 'have defeated over 100 mercenary bakers'];
 var quests = ['to seek the holy grail', 'to annoy the felonius Monk', 'to bake 101 cakes'];
