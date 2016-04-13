@@ -71,7 +71,7 @@
 
 /*--------------------- GENERATOR PAGE -- GENERATOR PAGE ---------------------*/
 
-.generator html,body {
+.generator html, .generator body {
   background-color: #2B2B2B;
   color: white;
 }
