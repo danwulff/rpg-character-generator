@@ -1,5 +1,24 @@
 //Business Logic
 //----------------------------------------
+//localStorage Saved Input Array Objects
+
+if (!localStorage.savedCharacters) {
+  localStorage.savedCharacters = JSON.stringify([]);
+}
+
+var savedCharacters = JSON.parse(localStorage.savedCharacters);
+
+document.addEventListener("DOMContentLoaded", function() {
+  savedCharacters.forEach(function(char) {
+    $("ul#savedList").prepend("<li class='clickSave'>" + char.name + "</li>");
+    $(".clickSave").first().click(function() {
+      //when clicked, print
+      printCharacterOutput(char);
+    });
+  });
+});
+
+//Character Constructor
 function Character(characterName, gender, age, realm, race, profession){
   this.name = characterName;
   this.age = age;
@@ -177,6 +196,8 @@ $(document).ready(function() {
     printSaveList(currentChar);
     //hide save button
     $("#saveChar").hide();
+    savedCharacters.push(currentChar);
+    localStorage.savedCharacters = JSON.stringify(savedCharacters);
   });
 
   $("#clearHistory").click(function() {
