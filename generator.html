@@ -8,6 +8,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.3.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
     <title>RPGenerator</title>
   </head>
   <body>
@@ -56,13 +57,13 @@
                 <label for="characterName">Enter A Name or Leave Blank to Generate a Random Name</label>
                 <input id="characterName" type="text" class="form-control"></input>
 
-                <label for="gender">Select an Gender or Leave Blank to Generate a Random Age</label>
+                <label for="gender">Select a Gender or Leave Random; OR, enter your own choice</label>
                 <select id='gender' name="gender" class="form-control">
                   <option value="">Random</option>
                   <option value="Female">Female</option>
                   <option value="Male">Male</option>
+                  <input id='altGender' type="text" class="form-control" placeholder="ENTER OWN CHOICE HERE"></input>
                 </select>
-
                 <label for="characterAge">Select an Age or Leave Blank to Generate a Random Age</label>
                 <select id='age' name="age" class="form-control">
                   <option value="">Random</option>
