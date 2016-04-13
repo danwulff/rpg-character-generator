@@ -41,7 +41,6 @@ Character.prototype.random = function(library) {
 
 //Randomize function
 function randomize(charObj) {
-
   if (charObj.gender === '') {
     charObj.gender = charObj.random(gender);
   }
@@ -59,7 +58,7 @@ function randomize(charObj) {
       charObj.name = charObj.random(namesMaleMiddleEarth);
     } else if (charObj.name === '' && charObj.gender === 'Female'){
       charObj.name = charObj.random(namesFemaleMiddleEarth);
-    } else {
+    } else if (charObj.name === '') {
         var randomValue = Math.random();
         if (randomValue < 0.5) {
           charObj.name = charObj.random(namesMaleMiddleEarth);
@@ -81,7 +80,7 @@ function randomize(charObj) {
       charObj.name = charObj.random(namesMaleModernEarth);
     } else if (charObj.name === '' && charObj.gender === 'Female'){
       charObj.name = charObj.random(namesFemaleModernEarth);
-    } else {
+    } else if (charObj.name === '') {
         var randomValue = Math.random();
         if (randomValue < 0.5) {
           charObj.name = charObj.random(namesFemaleModernEarth);
@@ -104,7 +103,7 @@ function randomize(charObj) {
       charObj.name = charObj.random(namesMaleStarTrek);
     } else if (charObj.name === '' && charObj.gender === 'Female'){
       charObj.name = charObj.random(namesFemaleStarTrek);
-    } else {
+    } else if (charObj.name === '') {
         var randomValue = Math.random();
         if (randomValue < 0.5) {
           charObj.name = charObj.random(namesFemaleStarTrek);
