@@ -33,13 +33,15 @@
   font-size: 20px;
 }
 
-.splash .gradient{
+.splash .gradient {
   padding: 7px;
   background: #765A7D; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #2B2B2B); /* Standard syntax */
+  background: -webkit-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #765A7D, #2B2B2B); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #765A7D, #2B2B2B); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #765A7D, #2B2B2B); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#765A7D, #765A7D, #E3C3EB, #765A7D, #765A7D, #2B2B2B); /* Standard syntax */
+  height: 100vh;
+  background-attachment: scroll;
 }
 
 @-webkit-keyframes pulse {
@@ -83,7 +85,11 @@
   border: 0px;
   border-bottom: solid 3px #977a9f;
   border-radius: 0px;
+}
 
+.generator .nav-heading h3 {
+  margin-top: 8px;
+  font-size: 30px;
 }
 
 .generator .nav-heading div ul li a {
@@ -95,12 +101,12 @@
   margin-bottom: 27px;
   border: solid 3px #977a9f;
   border-radius: 7px;
-  box-shadow: 4px 4px 3px #544059, -4px 4px 3px #544059, 2px -2px 3px #544059, -2px -2px 3px #544059;
+  box-shadow: 4px 4px 3px #544059, -2px 2px 3px #544059, 2px -2px 3px #544059, -2px -2px 3px #544059;
   padding: 23px;
   padding-top: 0px;
 }
 
-.generator .col-xs-9 .row {
+.generator .col-sm-9 .row {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -140,6 +146,10 @@
 /*form {
   width: 80%;
 }*/
+
+.generator .optionPlaceholder {
+  color: white;
+}
 
 /*--------------------- ABOUT PAGE -- ABOUT PAGE ---------------------*/
 
