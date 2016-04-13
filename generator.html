@@ -11,84 +11,99 @@
     <title>RPGenerator</title>
   </head>
   <body>
-      <!-- Row -->
+
+    <nav class="navbar navbar-default nav-heading">
+      <div class="container-fluid">
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Splash Page</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="https://github.com/johndeezy/rpg-character-generator">Github</a></li>
+        </ul>
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+
+    <!-- Row -->
+    <div class="container">
       <div class="row">
 
-        <!-- Character Lists -->
+      <!-- Character Lists -->
         <div class="col-xs-3">
-          <div class="container">
-          <h3>Saved Characters</h3>
-          <ul id="savedList">
-          </ul>
-          <h3>History</h3>
-          <ul id="historyList">
-          </ul>
-          <button type="button" class="btn" id="clearHistory">Clear</button>
+          <div class="col-xs-12">
+            <h3>Saved Characters</h3>
+            <ul id="savedList">
+            </ul>
+            <h3>History</h3>
+            <ul id="historyList">
+            </ul>
+            <button type="button" class="btn" id="clearHistory">Clear</button>
           </div>
         </div>
         <!-- End: Character Lists -->
 
         <!-- Char creation & output -->
         <div class="col-xs-9">
-
           <!-- Character Creation -->
           <div class="row">
-            <div class="container">
-            <h3>Character Creation</h3>
-            <form id="submitCharacter">
-              <label for="characterName">Enter A Name or Leave Blank to Generate a Random Name</label>
-              <input id="characterName" type="text" class="form-control"></input>
+            <div class="col-xs-12">
+              <h3>Character Creation</h3>
+              <form id="submitCharacter">
+                <label for="characterName">Enter A Name or Leave Blank to Generate a Random Name</label>
+                <input id="characterName" type="text" class="form-control"></input>
 
-              <label for="gender">Select an Gender or Leave Blank to Generate a Random Age</label>
-              <select id='gender' name="gender" class="form-control">
-                <option value="">Random</option>
-                <option value="Female">Female</option>
-                <option value="Male">Male</option>
-              </select>
+                <label for="gender">Select an Gender or Leave Blank to Generate a Random Age</label>
+                <select id='gender' name="gender" class="form-control">
+                  <option value="">Random</option>
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                </select>
 
-              <label for="characterAge">Select an Age or Leave Blank to Generate a Random Age</label>
-              <select id='age' name="age" class="form-control">
-                <option value="">Random</option>
-                <option value="Young">Young</option>
-                <option value="Middle-aged">Middle-aged</option>
-                <option value="Old">Old</option>
-              </select>
+                <label for="characterAge">Select an Age or Leave Blank to Generate a Random Age</label>
+                <select id='age' name="age" class="form-control">
+                  <option value="">Random</option>
+                  <option value="Young">Young</option>
+                  <option value="Middle-aged">Middle-aged</option>
+                  <option value="Old">Old</option>
+                </select>
 
-              <label for="realm">Choose a Realm. Leave empty to generate at random</label>
-              <select id="realm"  name="realms" class="form-control">
-                <option value="">Random</option>
-                <option value="Middle Earth">Middle Earth</option>
-                <option value="Modern Earth">Modern Earth</option>
-                <option value="Star Trek">Star Trek</option>
-              </select>
+                <label for="realm">Choose a Realm. Leave empty to generate at random</label>
+                <select id="realm"  name="realms" class="form-control">
+                  <option value="">Random</option>
+                  <option value="Middle Earth">Middle Earth</option>
+                  <option value="Modern Earth">Modern Earth</option>
+                  <option value="Star Trek">Star Trek</option>
+                </select>
 
-              <label for="race">Enter A Character Race or Leave Blank to Generate at Random</label>
-              <input id="race" type="text" class="form-control"></input>
+                <label for="race">Enter A Character Race or Leave Blank to Generate at Random</label>
+                <input id="race" type="text" class="form-control"></input>
 
-              <label for="profession">Enter a profession or leave empty to generate at random</label>
-              <input id="profession" type="text" class="form-control"></input>
+                <label for="profession">Enter a profession or leave empty to generate at random</label>
+                <input id="profession" type="text" class="form-control"></input>
 
-              <button type="submit" class="btn">Submit</button>
-            </form>
-          </div>
+                <button type="submit" class="btn">Submit</button>
+              </form>
+            </div>
           </div>
           <!-- End: Character Creation -->
 
           <!-- Character Output -->
           <div class="row">
-            <div class="container">
-            <h3>Character Output</h3>
-            <p id="characterOutput">
-              You are <strong><span id="outputName">Corbus Lorax</span></strong> a <strong><span id="outputAge">Old</span></strong>, <strong><span id="outputRace">Human</span></strong>, <strong><span id="outputGender">Male</span></strong>, <strong><span id="outputProfession">Pirate</span></strong> from the <strong><span id="outputRealm">Star Trek</span></strong> Realm. You are known for your great achievement <strong><span id="outputDescription">has slain 500 orcs</span></strong> and are on a quest to <strong><span id="outputQuest">To seek the Holy Grail</span></strong>.
-            </p>
-            <button id="saveChar" type="text" class="btn">Save Character</button>
-          </div>
+            <div class="col-xs-12">
+              <h3>Character Output</h3>
+              <p id="characterOutput">
+                You are <strong><span id="outputName">Corbus Lorax</span></strong> a <strong><span id="outputAge">Old</span></strong>, <strong><span id="outputRace">Human</span></strong>, <strong><span id="outputGender">Male</span></strong>, <strong><span id="outputProfession">Pirate</span></strong> from the <strong><span id="outputRealm">Star Trek</span></strong> Realm. You are known for your great achievement <strong><span id="outputDescription">has slain 500 orcs</span></strong> and are on a quest to <strong><span id="outputQuest">To seek the Holy Grail</span></strong>.
+              </p>
+              <button id="saveChar" type="text" class="btn">Save Character</button>
+            </div>
           </div>
           <!-- End: Character Output -->
-
         </div>
         <!-- End: Char creation & output -->
       </div>
       <!-- End: Row -->
+    </div>
   </body>
 </html>

@@ -72,33 +72,74 @@
 /*--------------------- GENERATOR PAGE -- GENERATOR PAGE ---------------------*/
 
 .generator html,body {
-  height:100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+  background-color: #2B2B2B;
+  color: white;
 }
 
-.generator .col-xs-3 {
-  background: url('../img/paper-side.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height:100vh;
-  background-color: #E7C987;
+.generator .nav-heading {
+  color: white;
+  margin-bottom: 0px;
+  background-color:#765A7D;
+  border: 0px;
+  border-bottom: solid 3px #977a9f;
+  border-radius: 0px;
+
 }
 
-.generator .col-xs-9 {
-  background: url('../img/paper-bg.jpeg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height:100vh;
+.generator .nav-heading div ul li a {
+  color: white;
 }
 
-form {
+.generator .col-xs-12 {
+  background-color: #765A7D;
+  margin-bottom: 27px;
+  border: solid 3px #977a9f;
+  border-radius: 7px;
+  box-shadow: 4px 4px 3px #544059, -4px 4px 3px #544059, 2px -2px 3px #544059, -2px -2px 3px #544059;
+  padding: 23px;
+  padding-top: 0px;
+}
+
+.generator .col-xs-9 .row {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.generator .container {
+  margin-top: 50px;
+  padding: 0px;
+  /*margin: 30px;*/
+}
+
+.generator select,input {
+  margin-bottom: 10px;
+}
+
+.generator button {
+  background-color: white;
+  color: #765A7D;
+}
+
+.generator ul {
+  padding-left: 4px;
+  list-style-position: inside;
+}
+
+.generator li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*.generator .col-xs-9 {
+  background-color: #765A7D;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #765A7D;
+}*/
+
+/*form {
   width: 80%;
-}
+}*/
 
 /*--------------------- ABOUT PAGE -- ABOUT PAGE ---------------------*/
 
