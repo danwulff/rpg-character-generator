@@ -4,7 +4,7 @@
 
 if (!localStorage.savedCharacters) {
   localStorage.savedCharacters = JSON.stringify([]);
-}
+  }
 
 var savedCharacters = JSON.parse(localStorage.savedCharacters);
 
@@ -164,6 +164,11 @@ $(document).ready(function() {
   $("#clearHistory").hide();
   $("#saveChar").hide();
 
+  //removes clear button on load if no saved characters exist
+  if (!savedCharacters[0]) {
+    $('#clearSavedCharacters').hide();
+  }
+
   //submit for new character
   $("#submitCharacter").submit(function(event){
     event.preventDefault();
@@ -175,29 +180,33 @@ $(document).ready(function() {
     printCharacterOutput(newCharacter);
 
     //create listener to delay prepending to history list until next submit
-    $("#submitCharacter").click(function(){
+    $("#submitButton").click(function(){
       //prepend to list
       printHistoryList(newCharacter);
       //destroy this listener
-      $("#submitCharacter").unbind("click");
+      $("#submitButton").unbind("click");
     });
 
     //show save button
     $("#saveChar").show();
     //update currentChar
     currentChar = newCharacter;
+
+    // reset form after submit
+    document.getElementById("submitCharacter").reset();
   });
 
 
   $("#saveChar").click(function () {
     //destroys listener for history prepend delay (keeps item from being added to history)
-    $("#submitCharacter").unbind("click");
+    $("#submitButton").unbind("click");
     //create listener for save button
     printSaveList(currentChar);
     //hide save button
     $("#saveChar").hide();
     savedCharacters.push(currentChar);
     localStorage.savedCharacters = JSON.stringify(savedCharacters);
+    $("#clearSavedCharacters").show();
   });
 
   $("#clearHistory").click(function() {
@@ -205,8 +214,14 @@ $(document).ready(function() {
     clearHistoryList();
     $("#clearHistory").hide();
   });
-});
 
+  $("#clearSavedCharacters").click(function() {
+    localStorage.clear();
+    $("ul#savedList").html('');
+    $("#clearSavedCharacters").hide();
+  });
+
+});
 
 
 //Library

@@ -32,6 +32,7 @@
 
       <!-- Character Lists -->
         <div class="col-xs-3">
+<<<<<<< HEAD
           <div class="col-xs-12">
             <h3>Saved Characters</h3>
             <ul id="savedList">
@@ -40,6 +41,17 @@
             <ul id="historyList">
             </ul>
             <button type="button" class="btn" id="clearHistory">Clear</button>
+=======
+          <div class="container">
+          <h3>Saved Characters</h3>
+          <ul id="savedList">
+          </ul>
+          <button type="button" class="btn" id="clearSavedCharacters">Clear</button>
+          <h3>History</h3>
+          <ul id="historyList">
+          </ul>
+          <button type="button" class="btn" id="clearHistory">Clear</button>
+>>>>>>> clear
           </div>
         </div>
         <!-- End: Character Lists -->
@@ -83,9 +95,9 @@
                 <label for="profession">Enter a profession or leave empty to generate at random</label>
                 <input id="profession" type="text" class="form-control"></input>
 
-                <button type="submit" class="btn">Submit</button>
-              </form>
-            </div>
+              <button id="submitButton" type="submit" class="btn">Submit</button>
+            </form>
+          </div>
           </div>
           <!-- End: Character Creation -->
 
