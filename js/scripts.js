@@ -154,9 +154,9 @@ function printHistoryList (charObj) {
     $("#saveChar").show();
 
     //listener to remove from history list when saved
-    $("#saveChar").click(function () {
-      histListItem.remove();
-    });
+    // $("#saveChar").click(function () {
+    //  histListItem.remove();
+    // });
   });
 }
 
@@ -208,14 +208,7 @@ $(document).ready(function() {
     randomize(newCharacter);
     //print latest character
     printCharacterOutput(newCharacter);
-
-    //create listener to delay prepending to history list until next submit
-    $("#submitButton").click(function(){
-      //prepend to list
-      printHistoryList(newCharacter);
-      //destroy this listener
-      $("#submitButton").unbind("click");
-    });
+    printHistoryList(newCharacter);
 
     //show save button
     $("#saveChar").show();
@@ -228,8 +221,7 @@ $(document).ready(function() {
 
 
   $("#saveChar").click(function () {
-    //destroys listener for history prepend delay (keeps item from being added to history)
-    $("#submitButton").unbind("click");
+
     //create listener for save button
     printSaveList(currentChar);
     //hide save button
