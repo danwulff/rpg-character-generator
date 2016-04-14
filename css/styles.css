@@ -191,8 +191,7 @@
 }
 
 .about .avatars {
-  margin-right: 15px;
-  margin-bottom: 4px;
+  margin-right: 7px;
   margin-left: 0px;
   border: solid #999966 1px;
   box-shadow: 0 0 2pt 2pt #404040;
@@ -201,21 +200,4 @@
 .about .col-sm-6 p {
   font-size: 14pt;
   color: black;
-}
-
-ul.nav li a {
-  padding: 20px 10px;
-  color: #fff;
-  position: relative;
-}
-
-ul.nav li a:before {
-  position: absolute;
-  content: "";
-  width: 2px;
-  height: 60%;
-  left: 0;
-  background: #CDCDCD;
-  top: 50%;
-  transform: translate(0, -50%);
 }
