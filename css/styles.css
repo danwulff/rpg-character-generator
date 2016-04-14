@@ -202,3 +202,20 @@
   font-size: 14pt;
   color: black;
 }
+
+ul.nav li a {
+  padding: 20px 10px;
+  color: #fff;
+  position: relative;
+}
+
+ul.nav li a:before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 60%;
+  left: 0;
+  background: #CDCDCD;
+  top: 50%;
+  transform: translate(0, -50%);
+}
