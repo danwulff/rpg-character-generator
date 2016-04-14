@@ -176,7 +176,8 @@
 }
 
 .about .avatars {
-  margin-right: 7px;
+  margin-right: 15px;
+  margin-bottom: 4px;
   margin-left: 0px;
   border: solid #999966 1px;
   box-shadow: 0 0 2pt 2pt #404040;
