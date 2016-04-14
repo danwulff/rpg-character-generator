@@ -136,11 +136,11 @@ function printCharacterOutput (charObj) {
 
   //shows output box dependent on realm
   if (charObj.realm === 'Middle Earth') {
-    document.getElementById('outputImageBackground').style.background = "url('http://vignette3.wikia.nocookie.net/middleearthshadowofmordor7723/images/a/a3/Mt_doon_08.jpg/revision/latest?cb=20140522192028')";
+    document.getElementById('outputImageBackground').style.background = "url('img/middleEarth.png')";
   } else if (charObj.realm === 'Modern Earth') {
-    document.getElementById('outputImageBackground').style.background = "url('https://breadforthebride.files.wordpress.com/2014/10/dollarclubtree.jpg')";
+    document.getElementById('outputImageBackground').style.background = "url('img/modernEarth.jpg')";
   } else if (charObj.realm === 'Star Trek') {
-    document.getElementById('outputImageBackground').style.background = "url('http://images-cdn.moviepilot.com/images/c_fill,h_900,w_1455/t_mp_quality/i7ylq5tp68jry8oqu2pj/beyond-the-films-new-star-trek-tv-series-to-be-set-in-prime-timeline-star-trek-tv-show-697324.jpg')";
+    document.getElementById('outputImageBackground').style.background = "url('img/starTrek.jpg')";
   }
 }
 
