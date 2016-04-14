@@ -130,6 +130,21 @@
   cursor: pointer;
 }
 
+.col-xs-12 h3 {
+  text-shadow: 2pt 2pt #2b2b2b;
+}
+
+#outputHeader {
+  text-shadow: 2pt 2pt #2b2b2b;
+  font-size: 25pt;
+}
+
+#characterOutput {
+  font-size: 20pt;
+  font-family: 'Arapey';
+  text-shadow: 2pt 2pt #2b2b2b;
+}
+
 /*.generator .col-xs-9 {
   background-color: #765A7D;
   margin: 10px;
