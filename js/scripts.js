@@ -1,5 +1,16 @@
 //Business Logic
 //----------------------------------------
+
+//Animate CSS to apply effects in js
+$.fn.extend({
+    animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+        });
+    }
+});
+
 //localStorage Saved Input Array Objects
 
 if (!localStorage.savedCharacters) {
@@ -133,6 +144,8 @@ function printCharacterOutput (charObj) {
   $("#outputDescription").text(charObj.description);
   $("#outputQuest").text(charObj.quest);
   $("#characterOutput").show();
+  $('#characterOutput').animateCss('fadeIn');
+
 
   //shows output box dependent on realm
   if (charObj.realm === 'Middle Earth') {
@@ -224,7 +237,6 @@ $(document).ready(function() {
     $("#saveChar").show();
     //update currentChar
     currentChar = newCharacter;
-
     // reset form after submit
     document.getElementById("submitCharacter").reset();
   });
@@ -277,5 +289,5 @@ var namesFemaleStarTrek = ['Saldia Cornwall', 'Dartitha Darkness', 'Sally Sellss
 var racesStarTrek = ['Klingon', 'Human', 'Borg', 'Synthetic Life Form', 'Ferengi', 'Romulan', 'Vulcan', 'Xindi'];
 var professionsStarTrek = ['Redshirt', 'Engineer', 'Bartender', 'Trader', 'Pilot', 'Pirate', 'Commanding Officer', 'Doctor', 'Nurse', 'Mercenary', 'Baker', 'Scientist', 'Holophotographer', 'Security Officer', 'Ambassador', 'Chairman', 'Communications Officer', 'Helmsman', 'Professor', 'Weapons Specialist',  'Efficiency Monitor',  'Actor',  'Architect',  'Assassin',  'Arms Dealer',  'Assayer',  'Author',  'Janitor',  'Art Critic',  'Bounty Hunter',  'Businessman',  'Cleric',  'Comedian',  'Courier',  'Diplomat',  'Editor',  'Drama Critic',  'Fortune Teller',  'Homemaker',  'Information Dealer',  'Intelligence Officer',  'Inventor',  'Journalist',  'Junk Dealer',  'Lawyer',  'Logistics Officer',  'Mechanic',  'Merchant',  'Miner',  'Ombudsman',  'Orbital Engineer',  'Ordnance Officer',  'Thief'];
 
-var descriptions = [ 'are huge for your race, and more than a bit crazy. In fact, you drink your own piss while hunting and slaying Hobbits. Also, you ride a buffalo',  'were once a noble, but are now living on the streets. A shadowy figure visited your dream last night and has inspired you to become better', 'were once a pilot but retired after seeing your best friend killed in combat. Now you sulk around your parents\' condo, well, at least until last night, when the Fire Nation attacked',  'are dumb',  'got shot by rebel hobbits from the Ferengi home planet. You were saved by a deer and now seek revenge',  'are tall and scrawny after escaping the desert. Your knowledge of alchemy is all that saved you. Now you are on your own',  'just won the lottery! The problem is, it is the DEATH LOTTERY!!!!',  'just finished law school and everything in life is looking good. Hopefully nothing awful happens to you. OH NO, some dude named Arthur just chopped your limbs off. It is just a flesh wound though',  'are rotund and burdensome to those around you, your only hope is to complete the quest given to you by HIGH LORD ASANKARU',  'took from the rich and gave to the poor',  'loved someone who would never love you back',  'ate a ghost pepper once...  ',  'never enjoyed going outside'];
-var quests = [ 'to seek the Holy Grail', 'to destroy thine enemies', 'to destroy the enemies of god', 'to destroy the enemies of atheism', 'to finish paperwork', 'to pass the bar exam', 'to seek Inner Peace', 'to hunt and kill the Wolves of Tyranus', 'to become GOD, emperor of MANKIND', 'to finish Jedi Academy', 'to graduate Starfleet', 'to graduate Epicodus', 'to slay the dragon', 'to defeat the inner demons', 'to cure World Peace', 'to annihilate Jersey Cows', 'to save the ocean', 'to begin RAGNAROK', 'to eat all cake', 'to defeat Sauron and bring peace to all realms', 'to collect all the Pokemon', 'to defeat the demon lord of Volantis',  'to make gobs of money',  'to watch every episode of Dr. Who',  'to find the sword of King Arthur',  'to answer the Ultimate Question of Life, the Universe, and Everything'];
+var descriptions = [ 'are huge for your race, and more than a bit crazy. In fact, you drink your own piss while hunting and slaying Hobbits. Also, you ride a buffalo',  'were once a noble, but are now living on the streets. A shadowy figure visited your dream last night and has inspired you to become better', 'were once a pilot but retired after seeing your best friend killed in combat. Now you sulk around your parents\' condo, well, at least until last night, when the Fire Nation attacked',  'are dumb',  'got shot by rebel hobbits from the Ferengi home planet. You were saved by a deer and now seek revenge',  'are tall and scrawny after escaping the desert. Your knowledge of alchemy is all that saved you. Now you are on your own',  'just won the lottery! The problem is, it is the DEATH LOTTERY!!!!',  'just finished law school and everything in life is looking good. Hopefully nothing awful happens to you. OH NO, some dude named Arthur just chopped your limbs off. It is just a flesh wound though',  'are rotund and burdensome to those around you, your only hope is to complete the quest given to you by HIGH LORD ASANKARU',  'took from the rich and gave to the poor',  'loved someone who would never love you back',  'ate a ghost pepper once...  ',  'never enjoyed going outside', 'are living a genuinely happy and fulfilling life', 'have defeated over 100 mercenary bakers', 'keep the place running', 'are a force to be reckoned with', 'are the lone voice of reason in an unreasonable world', 'are firm but fair', 'need to shave', 'are smart', 'could really use a new car because the feds took it away after you used it to cook methamphetamines', 'are hungry', 'need to chill out breh. Go take a chill pill', 'were once a great warrior, but age and injury have brought you down. Now the local lord has requested an audience', 'ate a hamster', 'walked over 500 miles, then walked 500 more', 'defeated the dark ones in single combat, now they haunt your dreams', 'snared a rabbit', 'threw that one ring of power thingy into Mount Doom and are getting bored. How about you go on a quest', 'are wandering the wastes of wysteria and could use a drink. OH look, a tavern', 'are a slaver from Volantis, you add a notch to your belt whenever you enslave a hobbit', 'are tired of existential bullshit', 'are insensitive and more than a bit ornery', 'always need to be the center of attention'];
+var quests = [ 'to seek the Holy Grail', 'to destroy thine enemies', 'to destroy the enemies of god', 'to destroy the enemies of atheism', 'to finish paperwork', 'to pass the bar exam', 'to seek Inner Peace', 'to hunt and kill the Wolves of Tyranus', 'to become GOD, emperor of MANKIND', 'to finish Jedi Academy', 'to graduate Starfleet', 'to graduate Epicodus', 'to slay the dragon', 'to defeat the inner demons', 'to cure World Peace', 'to annihilate Jersey Cows', 'to save the ocean', 'to begin RAGNAROK', 'to eat all cake', 'to defeat Sauron and bring peace to all realms', 'to collect all the Pokemon', 'to defeat the demon lord of Volantis',  'to make gobs of money',  'to watch every episode of Dr. Who',  'to find the sword of King Arthur',  'to answer the Ultimate Question of Life, the Universe, and Everything', 'to chill breh', 'to make things great again', 'to invent a time machine so you can fix that thing you did'];
