@@ -6,7 +6,7 @@
 
 ###Download through GitHub
 
-###URL: View @ http://johndeezy.github.io/rpg-character-generator/ and download @ https://github.com/johndeezy/rpg-character-generator.git
+###URL: View @ http://dowjohn.github.io/rpg-character-generator/ and download @ https://github.com/dowjohn/rpg-character-generator.git
 
 ###Setup: Download through GitHub and open index html in chrome
 
